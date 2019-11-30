@@ -388,4 +388,14 @@ class Parser
         $this->buffer = '';
         return $currentBuffer;
     }
+
+    /**
+     * Checks if there is nothing left to parse.
+     *
+     * @return bool
+     */
+    public function isBufferEmpty()
+    {
+        return $this->bufferSize === 0 || $this->offset === $this->bufferSize;
+    }
 }
